@@ -75,15 +75,9 @@ CUDA_VISIBLE_DEVICES=0 python segment.py --exp my_exp --train --resume /path/to/
 Distributed training maintains batchnorm statistics on each GPU/worker/process without synchronization, which leads to different performances on different GPUs. At the end of each epoch, our distributed script reports averaged performance (top-1, top-5) by evaluating the whole validation set on all GPUs, and saves the model on the first GPU (throws away models on other GPUs). As a result, evaluating the saved model after training leads to slightly (<0.1%) different (could be either better or worse) numbers. In the paper, we reported the average performances for all models. Averaging batchnorm statistics before evaluation may lead to marginally better numbers.
 
 ## Credits
-ImageNet training script is modified from https://github.com/pytorch/pytorch
-
-ImageNet distributed training script is modified from https://github.com/NVIDIA/apex
-
-Pascal segmentation code is modified from https://github.com/chenxi116/DeepLabv3.pytorch
-
-ResNext model is modified form https://github.com/last-one/tools
-
-DLA models are modified from https://github.com/ucbdrive/dla
-
-DenseNet model is modified from https://github.com/csrhddlam/pytorch-checkpoint
-
+  * ImageNet training script is modified from https://github.com/pytorch/pytorch
+  * ImageNet distributed training script is modified from https://github.com/NVIDIA/apex
+  * Pascal segmentation code is modified from https://github.com/chenxi116/DeepLabv3.pytorch
+  * ResNext model is modified form https://github.com/last-one/tools
+  * DLA models are modified from https://github.com/ucbdrive/dla
+  * DenseNet model is modified from https://github.com/csrhddlam/pytorch-checkpoint
