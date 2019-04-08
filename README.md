@@ -1,7 +1,7 @@
 # ELASTIC
 This repo contains the original PyTorch implementation of Elastic introduced in the following paper
 
-[ELASTIC: Improving CNNs with Instance Specific Scaling Policies](https://arxiv.org/abs/1812.05262) (CVPR 2019, Oral)
+[ELASTIC: Improving CNNs with Dynamic Scaling Policies](https://arxiv.org/abs/1812.05262) (CVPR 2019, Oral)
 
 Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, and Mohammad Rastegari
 
