@@ -1,7 +1,11 @@
-# [Elastic: Improving CNNs with Dynamic Scaling Policies](https://arxiv.org/abs/1812.05262)
-By Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, and Mohammad Rastegari
+# ELASTIC
+This repo contains the original PyTorch implementation of Elastic introduced in the following paper
 
-This repo contains a PyTorch implementation of [Elastic](https://arxiv.org/abs/1812.05262) (CVPR 2019 Oral). It is compatible with PyTorch 1.0-stable, PyTorch 1.0-preview and PyTorch 0.4.1. All released models are exactly the models evaluated in the paper.
+[ELASTIC: Improving CNNs with Instance Specific Scaling Policies](https://arxiv.org/abs/1812.05262) (CVPR 2019, Oral)
+
+Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, and Mohammad Rastegari
+
+It is compatible with PyTorch 1.0-stable, PyTorch 1.0-preview and PyTorch 0.4.1. All released models are exactly the models evaluated in the paper.
 
 ## ImageNet
 We prepare our data following https://github.com/pytorch/examples/tree/master/imagenet
@@ -79,14 +83,14 @@ Distributed training maintains batchnorm statistics on each GPU/worker/process w
 
 ## Citation
 Please consider citing this paper if you find this project useful in your research.
-
-        @article{wang2019elastic,
-          title={ELASTIC: Improving CNNs with Dynamic Scaling Policies},
-          author={Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, Mohammad Rastegari},
-          journal={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
-          year={2019}
-        }
-        
+```
+@article{wang2019elastic,
+  title={ELASTIC: Improving CNNs with Dynamic Scaling Policies},
+  author={Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, Mohammad Rastegari},
+  journal={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2019}
+}
+```
 ## Credits
   * ImageNet training script is modified from https://github.com/pytorch/pytorch
   * ImageNet distributed training script is modified from https://github.com/NVIDIA/apex
