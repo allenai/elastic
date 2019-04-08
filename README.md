@@ -5,6 +5,8 @@ This repo contains the original PyTorch implementation of Elastic introduced in 
 
 Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, and Mohammad Rastegari
 
+<img src="figures/figure.png"/>
+
 It is compatible with PyTorch 1.0-stable, PyTorch 1.0-preview and PyTorch 0.4.1. All released models are exactly the models evaluated in the paper.
 
 ## ImageNet
