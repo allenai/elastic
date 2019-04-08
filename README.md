@@ -9,7 +9,7 @@ Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, and Mohammad Rastegari
 
 It is compatible with PyTorch 1.0-stable, PyTorch 1.0-preview and PyTorch 0.4.1. All released models are exactly the models evaluated in the paper.
 
-## ImageNet
+## ImageNet Classification
 We prepare our data following https://github.com/pytorch/examples/tree/master/imagenet
 
 Pretrained models available at 
@@ -39,7 +39,7 @@ Then run this training script inside the docker container.
 ```
 python -m apex.parallel.multiproc docker_classify.py /path/to/imagenet
 ```
-## MSCOCO
+## MSCOCO Multi-label Classification
 We extract data into this structure and use python cocoapi to load data: https://github.com/cocodataset/cocoapi
 ```
 /path/to/mscoco/annotations/instances_train2014.json
@@ -61,7 +61,7 @@ python multilabel_classify.py /path/to/mscoco --resume /path/to/model.pth.tar --
 ```
 python multilabel_classify.py /path/to/mscoco --resume /path/to/model.pth.tar
 ```
-## PASCAL VOC semantic segmentation
+## PASCAL VOC Semantic Segmentation
 We prepare PASCAL VOC data following https://github.com/chenxi116/DeepLabv3.pytorch
 
 Pretrained models available at
