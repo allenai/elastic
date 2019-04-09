@@ -3,7 +3,7 @@ This repo contains the original PyTorch implementation of Elastic introduced in 
 
 [ELASTIC: Improving CNNs with Dynamic Scaling Policies](https://arxiv.org/abs/1812.05262) (CVPR 2019, Oral)
 
-Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, and Mohammad Rastegari
+[Huiyu Wang](https://csrhddlam.github.io/), [Aniruddha Kembhavi](https://anikem.github.io/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/), [Alan Yuille](http://www.cs.jhu.edu/~ayuille/), and [Mohammad Rastegari](https://allenai.org/team/mohammadr/)
 
 <img src="figures/figure.png"/>
 
