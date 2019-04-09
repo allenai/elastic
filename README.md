@@ -1,6 +1,18 @@
-# Elastic
-This repo contains a PyTorch implementation of Elastic. It is compatible with PyTorch 1.0-stable, PyTorch 1.0-preview and PyTorch 0.4.1. All released models are exactly the models evaluated in the paper.
-## ImageNet
+# ELASTIC
+This repo contains the original PyTorch implementation of Elastic introduced in the following paper
+
+[ELASTIC: Improving CNNs with Dynamic Scaling Policies](https://arxiv.org/abs/1812.05262) (CVPR 2019, Oral)
+
+[Huiyu Wang](https://csrhddlam.github.io/), [Aniruddha Kembhavi](https://anikem.github.io/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/), [Alan Yuille](http://www.cs.jhu.edu/~ayuille/), and [Mohammad Rastegari](https://allenai.org/team/mohammadr/)
+
+It is compatible with PyTorch 1.0-stable, PyTorch 1.0-preview and PyTorch 0.4.1. All released models are exactly the models evaluated in the paper.
+
+## Contents
+* [ImageNet Classification](#imagenet-classification)
+* [MSCOCO Multi-label Classification](#mscoco-multi-label-classification)
+* [PASCAL VOC Semantic Segmentation](#pascal-voc-semantic-segmentation)
+
+## ImageNet Classification
 We prepare our data following https://github.com/pytorch/examples/tree/master/imagenet
 
 Pretrained models available at 
@@ -30,7 +42,7 @@ Then run this training script inside the docker container.
 ```
 python -m apex.parallel.multiproc docker_classify.py /path/to/imagenet
 ```
-## MSCOCO
+## MSCOCO Multi-label Classification
 We extract data into this structure and use python cocoapi to load data: https://github.com/cocodataset/cocoapi
 ```
 /path/to/mscoco/annotations/instances_train2014.json
@@ -52,7 +64,7 @@ python multilabel_classify.py /path/to/mscoco --resume /path/to/model.pth.tar --
 ```
 python multilabel_classify.py /path/to/mscoco --resume /path/to/model.pth.tar
 ```
-## PASCAL VOC semantic segmentation
+## PASCAL VOC Semantic Segmentation
 We prepare PASCAL VOC data following https://github.com/chenxi116/DeepLabv3.pytorch
 
 Pretrained models available at
@@ -74,6 +86,16 @@ CUDA_VISIBLE_DEVICES=0 python segment.py --exp my_exp --train --resume /path/to/
 ## Note
 Distributed training maintains batchnorm statistics on each GPU/worker/process without synchronization, which leads to different performances on different GPUs. At the end of each epoch, our distributed script reports averaged performance (top-1, top-5) by evaluating the whole validation set on all GPUs, and saves the model on the first GPU (throws away models on other GPUs). As a result, evaluating the saved model after training leads to slightly (<0.1%) different (could be either better or worse) numbers. In the paper, we reported the average performances for all models. Averaging batchnorm statistics before evaluation may lead to marginally better numbers.
 
+## Citation
+Please consider citing this paper if you find this project useful in your research.
+```
+@article{wang2019elastic,
+  title={ELASTIC: Improving CNNs with Dynamic Scaling Policies},
+  author={Huiyu Wang, Aniruddha Kembhavi, Ali Farhadi, Alan Yuille, Mohammad Rastegari},
+  journal={The IEEE Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year={2019}
+}
+```
 ## Credits
   * ImageNet training script is modified from https://github.com/pytorch/pytorch
   * ImageNet distributed training script is modified from https://github.com/NVIDIA/apex
@@ -81,3 +103,4 @@ Distributed training maintains batchnorm statistics on each GPU/worker/process w
   * ResNext model is modified form https://github.com/last-one/tools
   * DLA models are modified from https://github.com/ucbdrive/dla
   * DenseNet model is modified from https://github.com/csrhddlam/pytorch-checkpoint
+
