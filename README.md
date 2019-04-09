@@ -5,9 +5,12 @@ This repo contains the original PyTorch implementation of Elastic introduced in 
 
 [Huiyu Wang](https://csrhddlam.github.io/), [Aniruddha Kembhavi](https://anikem.github.io/), [Ali Farhadi](https://homes.cs.washington.edu/~ali/), [Alan Yuille](http://www.cs.jhu.edu/~ayuille/), and [Mohammad Rastegari](https://allenai.org/team/mohammadr/)
 
-<img src="figures/figure.png"/>
-
 It is compatible with PyTorch 1.0-stable, PyTorch 1.0-preview and PyTorch 0.4.1. All released models are exactly the models evaluated in the paper.
+
+## Contents
+* [ImageNet Classification](#imagenet-classification)
+* [MSCOCO Multi-label Classification](#mscoco-multi-label-classification)
+* [PASCAL VOC Semantic Segmentation](#pascal-voc-semantic-segmentation)
 
 ## ImageNet Classification
 We prepare our data following https://github.com/pytorch/examples/tree/master/imagenet
